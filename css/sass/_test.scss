@@ -1,0 +1,165 @@
+.laver-test {
+    &.test {
+        // background-image: url(../images/bg-llave.png);
+        // background-repeat: no-repeat;
+        // background-attachment: fixed;
+        // background-size: cover;
+    }
+    header {
+        &.container-fluid {
+            .cont-title{
+                padding: 20px;
+                text-align: center;
+                .logoT {
+                    background-image: url(../images/llave-maestra-negro.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 200px;
+                    height: 200px;
+                    margin: 0 auto;
+                }
+                .test-title {
+                    display: none;
+                    margin: 0 auto;
+                    @include laver-font(800,50);
+                    color: $text-select;
+                }
+            }
+            .test-indication{
+                margin: 0 auto;
+                text-align: center;
+                @include laver-font(600,18);
+                color: $text;
+                line-height: 30px;
+                margin-bottom: 60px;
+                padding: 30px;
+            }
+        }
+    }
+    main {
+        &.cont-test {
+            .content-question {
+                padding: 30px 10%;
+                &.ans1, &.ans3, &.ans5, &.ans7, &.ans9,
+                &.ans11 {
+                    background: $bg-test; 
+                } 
+                .content-option{
+                    padding: 15px 0;
+                    .align-items-start {
+                        display: inherit;
+                        padding: 20px 0;
+                        @include laver-to(medium) {
+                            display: flex;
+                            padding: 0;
+                        }
+                    }
+                }
+                .q-short {
+                    text-align: center;
+                    @include laver-to(medium){
+                        text-align: left;
+                    }
+                }
+                .question {
+                    &.q-bloq {
+                        padding-bottom: 20px;
+                        text-align: center;
+                        margin-left: 0;
+                        @include laver-to(medium){
+                            text-align: left;
+                            padding-bottom: 0;
+                            margin-left: 20px;
+                        }
+                    }   
+                    &.pre-question{
+                        @include laver-font(600,20);
+                        color: $text;
+                    }
+                    color: $text-select;
+                    padding-bottom: 20px;
+                    margin: 0;
+                    @include laver-font(600,20);
+                }
+                input[type="radio"],
+                input[type="checkbox"] {
+                    display: none;
+                  }
+                  input[type='radio']:checked + label,
+                  input[type='checkbox']:checked + label{
+                      //padding: 5px 20px;
+                      background: $select;
+                      border-radius: 3px;
+                      color: #fff;
+                      &::before{
+                            background: $text-2;
+                            border: 2px solid #fff;
+                          //display: none;
+                      }
+                }
+                .answer {
+                    @include laver-font(400,18);
+                    color: $text;
+                    display: block;
+                    margin-left: 10px;
+                    padding: 5px 15px;
+                    position: relative;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    &.a-short {
+                        margin: 0 auto;
+                        @include laver-to(medium){
+                            margin: 0;
+                            margin-left: 10px;
+                        }
+                    }
+                    &.q-bloq {
+                        text-align: center;
+                        margin-left: 40px;
+                    }
+                    &.answ-1, &.box {
+                        display: block;
+                        @include laver-to(small) {
+                            display: inline-block;
+                        }
+                    }
+                    &:hover{
+                        background: rgba(0,116,217,0.2);
+                    }
+                    &::before {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        display: inline-block;
+                        background: none;
+                        border: 2px solid $text;
+                        border-radius: 50%;
+                        margin-right: 7px;
+                    }
+                    &.box::before {
+                        border-radius: 0;
+                    }
+                }
+                
+            }
+            .question-indication {
+                @include laver-font(800,25);
+                color: $text;
+                padding: 0 30px;
+                padding-top: 60px;
+                text-align: center;
+            }
+            .send {
+                background: rgba(0,0,0,0.7);
+                color: white;
+                margin: 50px auto;
+                padding: 10px 30px;
+                cursor: pointer;
+                border: none;
+                &:hover {
+                    background: $text-select;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+@import 'formularioInicio';
+@import 'test';
+@import 'diploma';
+
+* {
+    box-sizing: border-box;
+    @include laver-font(400,20);
+  }
+  
