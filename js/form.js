@@ -46,7 +46,6 @@ $('input.answered').on('change', function() {
       status.val(0);
     }
    }
-  console.log(status.val());
   
 });
 
@@ -57,8 +56,7 @@ $('#send').on('click', function(){
     var valStatus = $(hidden[i]).val();
     if(valStatus == 1){
       finalScore = true;
-      console.log(finalScore);
-      window.location.replace("diploma.html");
+      window.location.replace("diploma.html?name=pepe segundo&surname=lala");
     } else {
       window.location.replace("testIncorrecto.html");
       return false;

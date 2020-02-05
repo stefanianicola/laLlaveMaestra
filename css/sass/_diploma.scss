@@ -4,7 +4,7 @@
         .diploma {
             width: 860px;
             height: 600px;
-            background-image: url(../images/diploma-prueba.jpg);
+            //background-image: url(../images/diploma-prueba.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
@@ -13,11 +13,11 @@
                 @include laver-font (600,40);
                 color: #000;
                 position: absolute;
-                top: 40%;
-                left: 50%;
+                top: 300px;
+                left: 400px;
                 transform: translateX(-200px);
                 padding: 20px 40px;
-                background-color: #fff;
+                //background-color: #fff;
             }
         }
     } 
