@@ -9,6 +9,8 @@
           }
         }
         .btn-again {
+          -webkit-appearance: none;
+          appearance: none;
             @include laver-font(800,30);
             padding: 20px 30px;
             background: $love;

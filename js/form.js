@@ -49,6 +49,18 @@ $('input.answered').on('change', function() {
   
 });
 
+// get parameters by url
+var getParameterByName = function(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+  results = regex.exec(location.search);
+  return (location.search.split(name + '=')[1] || '').split('&')[0];
+  }
+
+  var name = decodeURI(getParameterByName('name'));
+  var surname = decodeURI(getParameterByName('apellido'));
+
+  // send and check form
 $('#send').on('click', function(){
   var hidden = $('input[name=status-question]');
   var finalScore = false;
@@ -56,13 +68,16 @@ $('#send').on('click', function(){
     var valStatus = $(hidden[i]).val();
     if(valStatus == 1){
       finalScore = true;
-      window.location.replace("diploma.html?name=pepe segundo&surname=lala");
+      window.location.replace("diploma.html?name="+name+"&apellido="+surname);
     } else {
       window.location.replace("testIncorrecto.html");
       return false;
     }
   }
 })
+
+// replace name in the last step
+$('#name').text(name+' '+ surname);
 
 })
 

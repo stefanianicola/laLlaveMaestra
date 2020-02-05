@@ -8,6 +8,8 @@
     margin: 30px auto;
     color: rgba(0, 0, 0, 0.7); }
 .laver-test .error-test .btn-again {
+  -webkit-appearance: none;
+  appearance: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-style: normal;
@@ -148,6 +150,7 @@
     display: none; }
   .laver-test main.cont-test .content-question input[type='radio']:checked + label,
   .laver-test main.cont-test .content-question input[type='checkbox']:checked + label {
+    padding: 5px 15px;
     background: #17a2b8;
     border-radius: 3px;
     color: #fff; }
@@ -176,6 +179,9 @@
     .laver-test main.cont-test .content-question .answer.q-bloq {
       text-align: center;
       margin-left: 40px; }
+      @media all and (min-width: 576px) {
+        .laver-test main.cont-test .content-question .answer.q-bloq {
+          margin-left: 80px; } }
     .laver-test main.cont-test .content-question .answer.answ-1, .laver-test main.cont-test .content-question .answer.box {
       display: block; }
       @media all and (min-width: 576px) {
@@ -216,7 +222,7 @@
 .laver-test.trama-fondo {
   background-image: url(../images/trama.jpg); }
   .laver-test.trama-fondo .diploma {
-    width: 860px;
+    width: 700px;
     height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -229,8 +235,8 @@
       font-size: 40px;
       color: #000;
       position: absolute;
-      top: 300px;
-      left: 400px;
+      top: 100px;
+      left: 280px;
       transform: translateX(-200px);
       padding: 20px 40px; }
 

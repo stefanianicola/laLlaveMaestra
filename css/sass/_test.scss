@@ -1,10 +1,4 @@
 .laver-test {
-    &.test {
-        // background-image: url(../images/bg-llave.png);
-        // background-repeat: no-repeat;
-        // background-attachment: fixed;
-        // background-size: cover;
-    }
     header {
         &.container-fluid {
             .cont-title{
@@ -87,14 +81,13 @@
                   }
                   input[type='radio']:checked + label,
                   input[type='checkbox']:checked + label{
-                      //padding: 5px 20px;
+                      padding: 5px 15px;
                       background: $select;
                       border-radius: 3px;
                       color: #fff;
                       &::before{
                             background: $text-2;
                             border: 2px solid #fff;
-                          //display: none;
                       }
                 }
                 .answer {
@@ -116,6 +109,9 @@
                     &.q-bloq {
                         text-align: center;
                         margin-left: 40px;
+                        @include laver-to(small){
+                            margin-left: 80px;
+                        }
                     }
                     &.answ-1, &.box {
                         display: block;
