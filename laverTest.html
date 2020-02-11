@@ -13,10 +13,11 @@
     <body class="laver-test test">
         <header class="container-fluid">
                 <div class="row cont-title">
-                        <div class="logoT"></div>
-                        <h2 class="test-title">Laver Test</h2>
+                        <div class="logoT col-12"></div>
+                        <h2 class="test-title col-12">- Laver Test -</h2>
                 </div>
                 <div class="row">
+                        <p class="col-12 question-indication m-0">Multiple choice</p>
                         <p class="test-indication">Cliquee sobre la/s opción/es correctas (puede ser una o más de una, sólo se
                         dará como correcto a quien cliquee sobre la totalidad de la/s opción/es
                         correcta/s según el caso).</p>
@@ -49,7 +50,9 @@
                                 <input type="radio" class="answered" name="answer1" value="10" id="a-10"/>
                                 <label for="a-10" class="col-12 col-sm-5 answer answ-1 ">  Todas son correctas</label>
                                 <input type="radio" class="answered" name="answer1" value="11" id="a-11"/>
-                                <label for="a-11" class="col-12 col-sm-5 answer  answ-1 js-correct-answer">  Todas son incorrectas</label>
+                                <label for="a-11" class="col-12 col-sm-5 answer  answ-1 ">  Encariñarse</label>
+                                <input type="radio" class="answered" name="answer1" value="12" id="a-12"/>
+                                <label for="a-12" class="col-12 col-sm-5 answer  answ-1 js-correct-answer">  Todas son incorrectas</label>
                                 <input type="hidden" name="status-question">
                             </div>        
                     </div>
@@ -68,34 +71,34 @@
                                 <input type="hidden" name="status-question">
                             </div>  
                     </div>
-                    <div class="col-12 content-question ans3">
-                            <p class="question">El afecto</p>
-                            <div class="row" data-correct="3">
-                                <input type="radio" class="answered" name="answer3" value="1" id="a-15"/> 
-                                <label for="a-15" class="col-12 answer"> Es lo que hace que dos personas se amen.</label>
-                                <input type="radio" class="answered" name="answer3" value="2" id="a-16"/>
-                                <label for="a-16" class="col-12 answer">  Es el resultado del amor.</label>
-                                <input type="radio" class="answered" name="answer3" value="3" id="a-17"/>
-                                <label for="a-17" class="col-12 answer js-correct-answer">  Es una respuesta neuroquímica interna que se despierta ante ciertos
-                                    estímulos.</label>
-                                <input type="hidden" name="status-question">
-                            </div>  
+                    <div class="col-12 content-question ans3 check-a">
+                        <p class="question">Un contrato en una pareja debe ser</p>
+                        <div class="row d-block d-md-inline-block">
+                            <input class="answered checkbox" type="checkbox" name="answer3" value="1" id="a-15"/>
+                            <label for="a-15" class="answer box js-correct-answer">  Justo</label>
+                            <input class="answered checkbox" type="checkbox" name="answer3" value="2" id="a-16"/>
+                            <label for="a-16" class="answer box js-correct-answer">  Claro</label>
+                            <input class="answered checkbox" type="checkbox" name="answer3" value="3" id="a-17"/>
+                            <label for="a-17" class="answer box js-correct-answer">  Modificable previo consenso</label>
+                            <input class="answered checkbox" type="checkbox" name="answer3" value="4" id="a-18"/>
+                            <label for="a-18" class="answer box">  Exigente</label>
+                            <input class="answered checkbox" type="checkbox" name="answer3" value="5" id="a-19"/>
+                            <label for="a-19" class="answer box">  Inmodificable</label>
+                            <input type="hidden" name="status-question">
+                        </div>   
                     </div>
-                    <div class="col-12 content-question ans4 check-a">
-                            <p class="question">Un contrato en una pareja debe ser</p>
-                            <div class="row d-block d-md-inline-block">
-                                <input class="answered checkbox" type="checkbox" name="answer4" value="1" id="a-18"/>
-                                <label for="a-18" class="answer box js-correct-answer">  Justo</label>
-                                <input class="answered checkbox" type="checkbox" name="answer4" value="2" id="a-19"/>
-                                <label for="a-19" class="answer box js-correct-answer">  Claro</label>
-                                <input class="answered checkbox" type="checkbox" name="answer4" value="3" id="a-20"/>
-                                <label for="a-20" class="answer box js-correct-answer">  Flexible</label>
-                                <input class="answered checkbox" type="checkbox" name="answer4" value="4" id="a-21"/>
-                                <label for="a-21" class="answer box">  Exigente</label>
-                                <input class="answered checkbox" type="checkbox" name="answer4" value="5" id="a-22"/>
-                                <label for="a-22" class="answer box">  Inmodificable</label>
-                                <input type="hidden" name="status-question">
-                            </div>   
+                    <div class="col-12 content-question ans4">
+                        <p class="question">El afecto</p>
+                        <div class="row" data-correct="3">
+                            <input type="radio" class="answered" name="answer4" value="1" id="a-20"/> 
+                            <label for="a-20" class="col-12 answer"> Es lo que hace que dos personas se amen.</label>
+                            <input type="radio" class="answered" name="answer4" value="2" id="a-21"/>
+                            <label for="a-21" class="col-12 answer">  Es el resultado del amor.</label>
+                            <input type="radio" class="answered" name="answer4" value="3" id="a-22"/>
+                            <label for="a-22" class="col-12 answer js-correct-answer">  Es una respuesta neuroquímica interna que se despierta ante ciertos
+                                estímulos.</label>
+                            <input type="hidden" name="status-question">
+                        </div>  
                     </div>
                     <div class="col-12 content-question ans5">
                         <p class="question">El afecto en una pareja</p>
@@ -111,7 +114,7 @@
                         </div>   
                     </div>
                     <div class="col-12 content-question ans6">
-                            <p class="question">El sexo</p>
+                            <p class="question">El sexo como actividad</p>
                             <div class="row" data-correct="1">
                                 <input type="radio" class="answered" name="answer6" value="1" id="a-26"/>
                                 <label for="a-26" class="col-12 answer js-correct-answer">  Es un factor que interpela la estabilidad en las relaciones humanas.</label>

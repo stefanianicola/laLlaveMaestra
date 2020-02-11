@@ -1,32 +1,45 @@
 .laver-test {
+    .question-indication {
+        @include laver-font(800,25);
+        color: $text;
+        padding: 0 30px;
+        padding-top: 60px;
+        text-align: center;
+        margin-top: 70px;
+    }
     header {
         &.container-fluid {
             .cont-title{
                 padding: 20px;
                 text-align: center;
+                padding-bottom: 0;
                 .logoT {
                     background-image: url(../images/llave-maestra-negro.svg);
                     background-repeat: no-repeat;
                     background-size: contain;
+                    background-position-x: center;
                     width: 200px;
                     height: 200px;
                     margin: 0 auto;
                 }
-                .test-title {
-                    display: none;
-                    margin: 0 auto;
-                    @include laver-font(800,50);
+                .test-title { 
+                    margin: 50px auto;
+                    @include laver-font(600,30);
                     color: $text-select;
+                    @include laver-to(medium) {
+                        @include laver-font(600,40);
+                    }
                 }
             }
             .test-indication{
                 margin: 0 auto;
-                text-align: center;
                 @include laver-font(600,18);
                 color: $text;
                 line-height: 30px;
-                margin-bottom: 60px;
-                padding: 30px;
+                padding: 15px 40px;
+                @include laver-to(normal) {
+                    padding: 15px 80px;
+                }
             }
         }
     }
@@ -137,13 +150,6 @@
                     }
                 }
                 
-            }
-            .question-indication {
-                @include laver-font(800,25);
-                color: $text;
-                padding: 0 30px;
-                padding-top: 60px;
-                text-align: center;
             }
             .send {
                 background: rgba(0,0,0,0.7);
