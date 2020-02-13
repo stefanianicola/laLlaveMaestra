@@ -13,20 +13,38 @@ $(document).ready(function(){
 
   //Validacion de encuesta
 
+  var respuestas = {
+    rsp1: [12],
+    rsp2: [2],
+    rsp3: [1,2,3],
+    rsp4: [3],
+    rsp5: [2],
+    rsp6: [1],
+    rsp7: [2],
+    rsp8: [1],
+    rsp9: [1],
+    rsp10: [2],
+    rsp11: [1],
+    rsp12: [2],
+    rsp13: [1],
+    rsp14: [2],
+    rsp15: [2],
+    rsp16: [1],
+    rsp17: [2]
+  }
+
 $('input.answered').on('change', function() {
-  var success = $(this).parent().data('correct');
+  var rsp = $(this).parent().data('rsp');
+  console.log(rsp);
   var current = $(this).val();
   var status = $(this).siblings('input[name=status-question]');
-   if($(this).hasClass('checkbox')){
-     console.log()
-     var approve = [1,2,3]
-     var checks = $('input.checkbox:checked');
-     var multipleCheck = false;
+  var checks = $(this).parent().find('input:checked');
+  var multipleCheck = false;
      status.val(0);
     for(i = 0; i< checks.length; i++){
-      if(checks.length ==  approve.length){
-        for(x = 0; x < approve.length; x++){
-          if($(checks[i]).val() == approve[x]){
+      if(checks.length ==  respuestas[rsp].length){
+        for(x = 0; x < respuestas[rsp].length; x++){
+          if($(checks[i]).val() == respuestas[rsp][x]){
             multipleCheck = true;
             status.val(1);
           } else {
@@ -39,14 +57,8 @@ $('input.answered').on('change', function() {
         status.val(0);
       }
     } 
-   } else {
-    if(success == current){
-      status.val(1);
-    }else{
-      status.val(0);
-    }
-   }
-  
+    console.log(multipleCheck)
+       
 });
 
 // get parameters by url
@@ -80,5 +92,3 @@ $('#send').on('click', function(){
 $('#name').text(name+' '+ surname);
 
 })
-
-
