@@ -1,31 +1,33 @@
 .laver-test {
     &.trama-fondo {
-        background-image: url(../images/trama.jpg);
         .content-diploma {
-            margin: 20px auto;
+            margin: 30px auto;
+            width: 375px;
+            height: 700px;
+            @include laver-to(medium) {
+                width: 1000px;
+            }
             .diploma {
-                width: 350px;
-                height: 500px;
-                background-image: url(../images/diploma-prueba.jpg);
+                width: 100%;
+                background-image: url(../images/diploma-laver.png);
                 background-repeat: no-repeat;
                 background-size: contain;
                 position: relative;
-                margin: 40px auto;
                 @include laver-to(medium) {
-                    width: 700px;
+                    background-size: cover;
                 }
                 .name {
-                    @include laver-font (600,30);
+                    font-family: 'Playfair Display', serif;
+                    font-size: 16px;
                     color: #000;
                     position: absolute;
-                    top: 70px;
-                    left: 50px;
-                    //transform: translateX(-200px);
+                    top: 115px;
+                    left: 60px;
                     padding: 20px 40px;
                     @include laver-to(medium) {
-                        @include laver-font (600,50);
-                        top: 170px;
-                        left: 190px;
+                        font-size: 30px;
+                        top: 355px; 
+                        left: 300px;
                     }
                 }
             }

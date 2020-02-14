@@ -227,39 +227,35 @@
   .laver-test main.cont-test .send:hover {
     background: #1B6487; }
 
-.laver-test.trama-fondo {
-  background-image: url(../images/trama.jpg); }
-  .laver-test.trama-fondo .content-diploma {
-    margin: 20px auto; }
-    .laver-test.trama-fondo .content-diploma .diploma {
-      width: 350px;
-      height: 500px;
-      background-image: url(../images/diploma-prueba.jpg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      position: relative;
-      margin: 40px auto; }
+.laver-test.trama-fondo .content-diploma {
+  margin: 30px auto;
+  width: 375px;
+  height: 700px; }
+  @media all and (min-width: 768px) {
+    .laver-test.trama-fondo .content-diploma {
+      width: 1000px; } }
+  .laver-test.trama-fondo .content-diploma .diploma {
+    width: 100%;
+    background-image: url(../images/diploma-laver.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative; }
+    @media all and (min-width: 768px) {
+      .laver-test.trama-fondo .content-diploma .diploma {
+        background-size: cover; } }
+    .laver-test.trama-fondo .content-diploma .diploma .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: #000;
+      position: absolute;
+      top: 115px;
+      left: 60px;
+      padding: 20px 40px; }
       @media all and (min-width: 768px) {
-        .laver-test.trama-fondo .content-diploma .diploma {
-          width: 700px; } }
-      .laver-test.trama-fondo .content-diploma .diploma .name {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        font-size: 30px;
-        color: #000;
-        position: absolute;
-        top: 70px;
-        left: 50px;
-        padding: 20px 40px; }
-        @media all and (min-width: 768px) {
-          .laver-test.trama-fondo .content-diploma .diploma .name {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-style: normal;
-            font-size: 50px;
-            top: 170px;
-            left: 190px; } }
+        .laver-test.trama-fondo .content-diploma .diploma .name {
+          font-size: 30px;
+          top: 355px;
+          left: 300px; } }
 
 * {
   box-sizing: border-box;

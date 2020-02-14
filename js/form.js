@@ -35,7 +35,6 @@ $(document).ready(function(){
 
 $('input.answered').on('change', function() {
   var rsp = $(this).parent().data('rsp');
-  console.log(rsp);
   var current = $(this).val();
   var status = $(this).siblings('input[name=status-question]');
   var checks = $(this).parent().find('input:checked');
@@ -57,7 +56,6 @@ $('input.answered').on('change', function() {
         status.val(0);
       }
     } 
-    console.log(multipleCheck)
        
 });
 
