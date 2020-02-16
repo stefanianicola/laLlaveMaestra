@@ -20,7 +20,7 @@ $(document).ready(function(){
     rsp4: [3],
     rsp5: [2],
     rsp6: [1],
-    rsp7: [2],
+    rsp7: [2,3],
     rsp8: [1],
     rsp9: [1],
     rsp10: [2],
@@ -56,7 +56,7 @@ $('input.answered').on('change', function() {
         status.val(0);
       }
     } 
-       
+      
 });
 
 // get parameters by url

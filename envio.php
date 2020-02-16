@@ -22,7 +22,7 @@ $smtpUsuario = "no-respond@damiandelper.com";  // Mi cuenta de correo
 $smtpClave = "cLg0OU0xMqbT";  // Mi contraseña
 
 // Email donde se enviaran los datos cargados en el formulario de contacto
-$emailDestino = "llavemaestraok@gmail.com";
+$emailDestino = "stefanianicola@gmail.com";
 
 $mail = new PHPMailer();
 $mail->IsSMTP();
