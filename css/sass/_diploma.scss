@@ -2,32 +2,41 @@
     &.trama-fondo {
         .content-diploma {
             margin: 30px auto;
-            width: 375px;
+            text-align: center;
+            width: 365px;
             height: 700px;
             @include laver-to(medium) {
+                width: 700px;
+            }
+            @include laver-to(normal) {
                 width: 1000px;
             }
             .diploma {
                 width: 100%;
-                background-image: url(../images/diploma-laver.png);
+                background-image: url(../images/diplomaLaver.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
                 position: relative;
-                @include laver-to(medium) {
-                    background-size: cover;
-                }
+                text-align: center;
                 .name {
-                    font-family: 'Playfair Display', serif;
-                    font-size: 16px;
+                    @include laver-font2(300,16);
+                    font-style: italic;
                     color: #000;
                     position: absolute;
-                    top: 115px;
-                    left: 60px;
+                    top: 110px;
                     padding: 20px 40px;
+                    width: 100%;
+                    text-align: center;
+                    text-transform: lowercase;
+                    &::first-line {
+                        text-transform: capitalize;
+                    }
                     @include laver-to(medium) {
-                        font-size: 30px;
-                        top: 355px; 
-                        left: 300px;
+                        @include laver-font2(300,30);
+                        top: 230px; 
+                    }
+                    @include laver-to(normal) {
+                        top: 345px; 
                     }
                 }
             }

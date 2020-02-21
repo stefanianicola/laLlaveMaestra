@@ -15,3 +15,16 @@ $competitive-sm: 576px; // Breakpoint for smartphone
 $competitive-md: 768px; // Breakpoint for tablet portrait
 $competitive-lg: 992px; // Breakpoint for tablet landscape
 $competitive-el: 1025px; // Breakpoint for desktop
+
+
+//fuente diploma
+@font-face {font-family: "Didot"; 
+    src: url("//db.onlinewebfonts.com/t/50fdb00bd31f40c13c4fab9f1de2387e.eot"); 
+    src: url("//db.onlinewebfonts.com/t/50fdb00bd31f40c13c4fab9f1de2387e.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/50fdb00bd31f40c13c4fab9f1de2387e.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/50fdb00bd31f40c13c4fab9f1de2387e.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/50fdb00bd31f40c13c4fab9f1de2387e.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/50fdb00bd31f40c13c4fab9f1de2387e.svg#Didot") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
