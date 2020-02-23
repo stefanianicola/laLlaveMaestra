@@ -262,10 +262,7 @@
       top: 110px;
       padding: 20px 40px;
       width: 100%;
-      text-align: center;
-      text-transform: lowercase; }
-      .laver-test.trama-fondo .content-diploma .diploma .name::first-line {
-        text-transform: capitalize; }
+      text-align: center; }
       @media all and (min-width: 768px) {
         .laver-test.trama-fondo .content-diploma .diploma .name {
           font-family: 'Didot';

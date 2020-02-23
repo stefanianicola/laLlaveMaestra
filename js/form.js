@@ -14,7 +14,7 @@ $(document).ready(function(){
   //Validacion de encuesta
 
   var respuestas = {
-    rsp1: [12],
+    rsp0: [12],
     rsp2: [2],
     rsp3: [1,2,3],
     rsp4: [3],
@@ -59,16 +59,19 @@ $('input.answered').on('change', function() {
       
 });
 
+
+
 // get parameters by url
 var getParameterByName = function(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
   results = regex.exec(location.search);
   return (location.search.split(name + '=')[1] || '').split('&')[0];
-  }
-
+  };
+  
   var name = decodeURI(getParameterByName('name'));
   var surname = decodeURI(getParameterByName('apellido'));
+
 
   // send and check form
 $('#send').on('click', function(){
@@ -87,6 +90,36 @@ $('#send').on('click', function(){
 })
 
 // replace name in the last step
-$('#name').text(name+' '+ surname);
+// Imprimir nombre y apellido siempre con inicial mayuscula, sin importar como lo escribe el usuario
+
+function findGetParameter(parameterName) {
+  var result = null,
+      tmp = [];
+  location.search
+      .substr(1)
+      .split("&")
+      .forEach(function (item) {
+        tmp = item.split("=");
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+      });
+  return result;
+};
+var apellido = findGetParameter('apellido');
+var arrApe = apellido.split(' ');
+var nombre = findGetParameter('name');
+var arrNom = nombre.split(' ');
+var fullNameTemplate = '';
+
+arrNom.forEach(function(value, index) {
+    fullNameTemplate += value.charAt(0).toUpperCase()+ value.slice(1).toLowerCase()  + ' ';
+  //console.log(value.charAt(0).toUpperCase() + value.slice(1).toLowerCase())
+});
+
+arrApe.forEach(function(value, index) {
+  fullNameTemplate += value.charAt(0).toUpperCase() + value.slice(1).toLowerCase() + ' ' ;
+  //console.log(value.charAt(0).toUpperCase() + value.slice(1).toLowerCase());
+});
+
+$('#name').text(fullNameTemplate);
 
 })

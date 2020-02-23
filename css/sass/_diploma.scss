@@ -27,10 +27,6 @@
                     padding: 20px 40px;
                     width: 100%;
                     text-align: center;
-                    text-transform: lowercase;
-                    &::first-line {
-                        text-transform: capitalize;
-                    }
                     @include laver-to(medium) {
                         @include laver-font2(300,30);
                         top: 230px; 
